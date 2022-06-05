@@ -14,79 +14,101 @@ dp = Dispatcher(bot)
 @dp.message_handler(commands=['start', 'help'])
 async def send_welcome(message: types.Message):
     await message.reply("<b>Tilni tanlang!</b>",parse_mode='HTML',reply_markup=til)
-
  
 
 @dp.message_handler(text="🇺🇿 O'zbekcha")
 async def uzbekcha_uchun(message: types.Message):
-    await message.answer("<b>Manzilingizni kiriting!</b>",parse_mode='HTML',reply_markup=joy)
+    await message.answer("<b>Raqamingizni kiriting!</b>",parse_mode='HTML',reply_markup=raqam)
 
 
-#buyurtma uchun
+@dp.message_handler(text="🇷🇺 Руссуий")
+async def ruscha_uchun(message: types.Message):
+    await message.answer("<b>Faqat o'zbek tili mavjud </b>",parse_mode='HTML',reply_markup=til)
 
-@dp.message_handler(text="Yunusobod")
-async def buyr(message: types.Message):
-    await message.answer("<b> Yunusobod tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)
+    
+@dp.message_handler(text="🇬🇧 England")
+async def england_uchun(message: types.Message):
+    await message.answer("<b>Faqat o'zbek tili mavjud </b>",parse_mode='HTML',reply_markup=til)
 
-@dp.message_handler(text="Chilonzor")
-async def buyr(message: types.Message):
-    await message.answer("<b> Chilonzor tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)    
 
-@dp.message_handler(text="Olmozor")
-async def buyr(message: types.Message):
-    await message.answer("<b> Olmozor tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)
+@dp.message_handler(content_types=["contact"])
+async def england_uchun(message: types.Message):
+    await message.answer("<b>Joylashuvni yuboring </b>",parse_mode='HTML',reply_markup=joy)
 
-@dp.message_handler(text="Sergili")
-async def buyr(message: types.Message):
-    await message.answer("<b> Sergili tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)
 
-@dp.message_handler(text="Yangobod")
-async def buyr(message: types.Message):
-    await message.answer("<b> Yangobod tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)
+@dp.message_handler(content_types=["location"])
+async def england_uchun(message: types.Message):
+    await message.answer("<b>Raxmat😊 \nSiz ro'yxatdan o'tingiz✔️ \nKategoriyalardan birini tanlang!👇👇👇 </b>",parse_mode='HTML',reply_markup=menu)
 
-@dp.message_handler(text="Yakkasaroy")
-async def buyr(message: types.Message):
-    await message.answer("<b> Yakkasaroy tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)
+
+
+
+
+# #buyurtma uchun
+
+# @dp.message_handler(text="Yunusobod")
+# async def buyr(message: types.Message):
+#     await message.answer("<b> Yunusobod tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)
+
+# @dp.message_handler(text="Chilonzor")
+# async def buyr(message: types.Message):
+#     await message.answer("<b> Chilonzor tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)    
+
+# @dp.message_handler(text="Olmozor")
+# async def buyr(message: types.Message):
+#     await message.answer("<b> Olmozor tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)
+
+# @dp.message_handler(text="Sergili")
+# async def buyr(message: types.Message):
+#     await message.answer("<b> Sergili tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)
+
+# @dp.message_handler(text="Yangobod")
+# async def buyr(message: types.Message):
+#     await message.answer("<b> Yangobod tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)
+
+# @dp.message_handler(text="Yakkasaroy")
+# async def buyr(message: types.Message):
+#     await message.answer("<b> Yakkasaroy tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)
 
 
 
 #Menyu uchun
 
-@dp.callback_query_handler(text="buy")
-async def men(call:CallbackQuery):
-    await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)
+# @dp.callback_query_handler(text="buy")
+# async def men(call:CallbackQuery):
+#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)
 
-@dp.message_handler(text="buy")
-async def men(call:CallbackQuery):
-    await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)
+# @dp.message_handler(text="buy")
+# async def men(call:CallbackQuery):
+#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)
 
-@dp.message_handler(text="buy")
-async def men(call:CallbackQuery):
-    await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)
+# @dp.message_handler(text="buy")
+# async def men(call:CallbackQuery):
+#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)
 
-@dp.message_handler(text="buy")
-async def men(call:CallbackQuery):
-    await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)
+# @dp.message_handler(text="buy")
+# async def men(call:CallbackQuery):
+#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)
 
-@dp.message_handler(text="buy")
-async def men(call:CallbackQuery):
-    await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)
+# @dp.message_handler(text="buy")
+# async def men(call:CallbackQuery):
+#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)
 
-@dp.message_handler(text="buy")
-async def men(call:CallbackQuery):
-    await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu) 
+# @dp.message_handler(text="buy")
+# async def men(call:CallbackQuery):
+#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu) 
 
-@dp.message_handler(text="buy")
-async def men(call:CallbackQuery):
-    await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu) 
+# @dp.message_handler(text="buy")
+# async def men(call:CallbackQuery):
+#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu) 
 
-@dp.message_handler(text="buy")
-async def men(call:CallbackQuery):
-    await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu) 
+# @dp.message_handler(text="buy")
+# async def men(call:CallbackQuery):
+#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu) 
 
-@dp.message_handler(text="buy")
-async def men(call:CallbackQuery):
-    await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)                            
+# @dp.message_handler(text="buy")
+# async def men(call:CallbackQuery):
+#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)                            
 
 
 
@@ -104,34 +126,100 @@ async def lav_vash(call:CallbackQuery):
 @dp.callback_query_handler(text="lavash1")
 async def lav_vash(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/lavash2.jpg','rb'),
-        caption="""Narxi: 19000 so'm💵
-        Tarkibi""",reply_markup = lavash_menyu2)
+        photo=open('images/lavash11.jpg','rb'),
+        caption="""Narxi: 20000 so'm💵
+Tarkibi:Xamir, mol go`sht, chips, pomidor, bodring, sous, ko'katlar mayonez. 
+Miqdorini tanlang yoki kiriting!""",reply_markup = lavash_menyu2)
     await call.message.delete()     
 
+
 @dp.callback_query_handler(text="lavash2")
-async def tovuqli_soni(call:CallbackQuery):
-    await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🌯Classic mini lavash \nNarxi: 17000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu3)
+async def lav_vash(call:CallbackQuery):
+    await call.message.answer_photo(
+        photo=open('images/lavash2.jpg','rb'),
+        caption="""Narxi: 17000 so'm💵
+Tarkibi:Xamir, mol go`sht, chips, pomidor, bodring, sous, ko'katlar mayonez. 
+Miqdorini tanlang yoki kiriting!""",reply_markup = lavash_menyu3)
+    await call.message.delete()
 
 @dp.callback_query_handler(text="lavash3")
-async def tovuqli_soni(call:CallbackQuery):
-    await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🧀Pishloqli lavash \nNarxi: 20000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu4)
+async def lav_vash(call:CallbackQuery):
+    await call.message.answer_photo(
+        photo=open('images/lavash3.jpg','rb'),
+        caption="""Narxi: 22000 so'm💵
+Tarkibi:Xamir, mol go`sht, pishloq, chips, pomidor, bodring, sous, ko'katlar mayonez. 
+Miqdorini tanlang yoki kiriting!""",reply_markup = lavash_menyu4)
+    await call.message.delete()
 
 @dp.callback_query_handler(text="lavash4")
-async def tovuqli_soni(call:CallbackQuery):
-    await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🧀Pishloqli mini lavash \nNarxi: 18000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu5)
+async def lav_vash(call:CallbackQuery):
+    await call.message.answer_photo(
+        photo=open('images/lavash4.jpg','rb'),
+        caption="""Narxi: 19000 so'm💵
+Tarkibi:Tandir xamir, mol go`sht, pishloq, chips, pomidor, bodring, sous, ko'katlar mayonez. 
+Miqdorini tanlang yoki kiriting!""",reply_markup = lavash_menyu5)
+    await call.message.delete()
+
 
 @dp.callback_query_handler(text="lavash5")
-async def tovuqli_soni(call:CallbackQuery):
-    await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🥖Tandir lavash \nNarxi: 20000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu6)
+async def lav_vash(call:CallbackQuery):
+    await call.message.answer_photo(
+        photo=open('images/lavash5.jpg','rb'),
+        caption="""Narxi: 20000 so'm💵
+Tarkibi:Tandir xamir, mol go`sht, chips, pomidor, bodring, sous, ko'katlar mayonez. 
+Miqdorini tanlang yoki kiriting!""",reply_markup = lavash_menyu6)
+    await call.message.delete()
+
 
 @dp.callback_query_handler(text="lavash6")
-async def tovuqli_soni(call:CallbackQuery):
-    await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🥖Tandir pishloqli🧀 lavash \nNarxi: 21000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu7)
+async def lav_vash(call:CallbackQuery):
+    await call.message.answer_photo(
+        photo=open('images/lavash6.jpg','rb'),
+        caption="""Narxi: 23000 so'm💵
+Tarkibi:Tandir xamir, mol go`sht, pishloq, chips, pomidor, bodring, sous, ko'katlar mayonez. 
+Miqdorini tanlang yoki kiriting!""",reply_markup = lavash_menyu7)
+    await call.message.delete()
+
 
 @dp.callback_query_handler(text="lavash7")
-async def tovuqli_soni(call:CallbackQuery):
-    await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🌶Qalampirli lavash \nNarxi: 19000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu8)
+async def lav_vash(call:CallbackQuery):
+    await call.message.answer_photo(
+        photo=open('images/lavash7.jpg','rb'),
+        caption="""Narxi: 20000 so'm💵
+Tarkibi:Xamir, mol go`sht, qalampir, chips, pomidor, bodring, sous, ko'katlar mayonez. 
+Miqdorini tanlang yoki kiriting!""",reply_markup = lavash_menyu8)
+    await call.message.delete()
+
+
+
+
+
+
+
+
+# @dp.callback_query_handler(text="lavash2")
+# async def tovuqli_soni(call:CallbackQuery):
+#     await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🌯Classic mini lavash \nNarxi: 17000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu3)
+
+# @dp.callback_query_handler(text="lavash3")
+# async def tovuqli_soni(call:CallbackQuery):
+#     await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🧀Pishloqli lavash \nNarxi: 20000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu4)
+
+# @dp.callback_query_handler(text="lavash4")
+# async def tovuqli_soni(call:CallbackQuery):
+#     await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🧀Pishloqli mini lavash \nNarxi: 18000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu5)
+
+# @dp.callback_query_handler(text="lavash5")
+# async def tovuqli_soni(call:CallbackQuery):
+#     await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🥖Tandir lavash \nNarxi: 20000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu6)
+
+# @dp.callback_query_handler(text="lavash6")
+# async def tovuqli_soni(call:CallbackQuery):
+#     await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🥖Tandir pishloqli🧀 lavash \nNarxi: 21000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu7)
+
+# @dp.callback_query_handler(text="lavash7")
+# async def tovuqli_soni(call:CallbackQuery):
+#     await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🌶Qalampirli lavash \nNarxi: 19000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu8)
 
 
 
@@ -410,9 +498,9 @@ async def sendvich(call:CallbackQuery):
 @dp.callback_query_handler(text="t_send1")
 async def sendvich(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/sendvich3.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Tostr non. 
+        photo=open('images/sendvich2.jpg','rb'),
+        caption="""Narxi: 20000 so'm💵
+Tarkibi: Tostr non, tuxum, tovuq fele pishloq, sous, salat bargi. 
 Miqdorini tanlang yoki kiriting!""",reply_markup = sendvich_menu2)
     await call.message.delete()
 
@@ -421,8 +509,8 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = sendvich_menu2)
 async def sendvich(call:CallbackQuery):
     await call.message.answer_photo(
         photo=open('images/sendvich3.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        caption="""Narxi: 19000 so'm💵
+Tarkibi: Tostr non, tovuq fele pishloq, sous, salat bargi. 
 Miqdorini tanlang yoki kiriting!""",reply_markup = sendvich_menu3)
     await call.message.delete()
 
@@ -449,16 +537,16 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = sendvich_menu3)
 @dp.callback_query_handler(text="desert")
 async def desert(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog3.jpg','rb'),
-        caption="""🍰Desert Menu""",reply_markup = sendvich_menu1)
+        photo=open('images/desert1.jpg','rb'),
+        caption="""🍰Desert Menu""",reply_markup = desert_menu1)
     await call.message.delete()
 
 @dp.callback_query_handler(text="medovik")
 async def desert(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/desert2.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Chizkeyk Asalli 
 Miqdorini tanlang yoki kiriting!""",reply_markup = desert_menu2)
     await call.message.delete()
 
@@ -466,27 +554,27 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = desert_menu2)
 @dp.callback_query_handler(text="chizkey")
 async def desert(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/desert3.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Chizkeyk Qulupnayli 
 Miqdorini tanlang yoki kiriting!""",reply_markup = desert_menu3)
     await call.message.delete()
 
 @dp.callback_query_handler(text="q_pon")
 async def desert(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/desert4.jpg','rb'),
+        caption="""Narxi: 10000 so'm💵
+Qulupnayli ponchik 
 Miqdorini tanlang yoki kiriting!""",reply_markup = desert_menu4)
     await call.message.delete()
 
 @dp.callback_query_handler(text="sh_pon")
 async def desert(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/desert5.jpg','rb'),
+        caption="""Narxi: 10000 so'm💵
+Shokoladli ponchik
 Miqdorini tanlang yoki kiriting!""",reply_markup = desert_menu5)
     await call.message.delete()
 
@@ -520,28 +608,28 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = desert_menu5)
 @dp.callback_query_handler(text="ichimlik")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog3.jpg','rb'),
+        photo=open('images/ichimlik.jpg','rb'),
         caption="""🥤Ichimlik Menu""",reply_markup = ichimlik_menu1)
     await call.message.delete()
 
 @dp.callback_query_handler(text="pepsi")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog3.jpg','rb'),
+        photo=open('images/ichimlik.jpg','rb'),
         caption="""🥤Ichimlik Menu""",reply_markup = ichimlik_menu2)
     await call.message.delete()
 
 @dp.callback_query_handler(text="suv")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog3.jpg','rb'),
+        photo=open('images/ichimlik.jpg','rb'),
         caption="""🥤Ichimlik Menu""",reply_markup = ichimlik_menu3)
     await call.message.delete()
 
 @dp.callback_query_handler(text="sok")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog3.jpg','rb'),
+        photo=open('images/ichimlik.jpg','rb'),
         caption="""🥤Ichimlik Menu""",reply_markup = ichimlik_menu4)
     await call.message.delete()
 
@@ -549,7 +637,7 @@ async def ichimlik(call:CallbackQuery):
 @dp.callback_query_handler(text="choy")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog3.jpg','rb'),
+        photo=open('images/ichimlik.jpg','rb'),
         caption="""🥤Ichimlik Menu""",reply_markup = ichimlik_menu5)
     await call.message.delete()
 
@@ -557,14 +645,14 @@ async def ichimlik(call:CallbackQuery):
 @dp.callback_query_handler(text="kofe")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog3.jpg','rb'),
+        photo=open('images/ichimlik.jpg','rb'),
         caption="""🥤Ichimlik Menu""",reply_markup = ichimlik_menu6)
     await call.message.delete()
 
 @dp.callback_query_handler(text="fresh")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog3.jpg','rb'),
+        photo=open('images/ichimlik.jpg','rb'),
         caption="""🥤Ichimlik Menu""",reply_markup = ichimlik_menu7)
     await call.message.delete()
 
@@ -573,9 +661,9 @@ async def ichimlik(call:CallbackQuery):
 @dp.callback_query_handler(text="pepsi1")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/pepsi1.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Pepsi 0.4L 
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu8)
     await call.message.delete()
 
@@ -583,36 +671,36 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu8)
 @dp.callback_query_handler(text="pepsi2")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/pepsi2.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Pepsi 0.5L
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu9)
     await call.message.delete()
 
 @dp.callback_query_handler(text="pepsi3")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/pepsi3.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Pepsi 1.5L
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu10)
     await call.message.delete()
 
 @dp.callback_query_handler(text="suv1")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/suv1.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Gazlangan suv 0.5L
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu11)
     await call.message.delete()
 
 @dp.callback_query_handler(text="suv2")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/suv2.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Gazlangan suv 0.5L
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu12)
     await call.message.delete()           
 
@@ -620,9 +708,9 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu12)
 @dp.callback_query_handler(text="sok1")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/sok1.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Olmali Sok
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu13)
     await call.message.delete()
 
@@ -630,9 +718,9 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu13)
 @dp.callback_query_handler(text="sok2")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/sok2.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Apelsinli Sok
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu14)
     await call.message.delete()
 
@@ -640,9 +728,9 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu14)
 @dp.callback_query_handler(text="sok3")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/sok3.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Shaftolili Sok
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu15)
     await call.message.delete()
 
@@ -650,9 +738,9 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu15)
 @dp.callback_query_handler(text="choy1")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/choy2.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Ko'k Choy
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu16)
     await call.message.delete()
 
@@ -660,9 +748,9 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu16)
 @dp.callback_query_handler(text="choy2")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/choy3.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Qora Choy
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu17)
     await call.message.delete()
 
@@ -670,9 +758,9 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu17)
 @dp.callback_query_handler(text="choy3")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/choy4.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Limon Choy
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu18)
     await call.message.delete()
 
@@ -680,27 +768,27 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu18)
 @dp.callback_query_handler(text="kofe1")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/kofe1.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Kapuchino
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu19)
     await call.message.delete()
 
 @dp.callback_query_handler(text="kofe2")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/kofe2.jpg','rb'),
+        caption="""Narxi: 12000 so'm💵
+Americano
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu20)
     await call.message.delete()
 
 @dp.callback_query_handler(text="kofe3")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/kofe3.jpg','rb'),
+        caption="""Narxi: 17000 so'm💵
+Latte
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu21)
     await call.message.delete()
 
@@ -708,18 +796,18 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu21)
 @dp.callback_query_handler(text="kofe4")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/kofe4.jpg','rb'),
+        caption="""Narxi: 10000 so'm💵
+Ekspresso
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu22)
     await call.message.delete()
 
-@dp.callback_query_handler(text="kofe15")
+@dp.callback_query_handler(text="kofe5")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/kofe5.jpg','rb'),
+        caption="""Narxi: 5000 so'm💵
+Sutli Kofe
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu23)
     await call.message.delete()
 
@@ -727,7 +815,7 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu23)
 @dp.callback_query_handler(text="fresh1")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/fresh1.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
 Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu24)
@@ -737,7 +825,7 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu24)
 @dp.callback_query_handler(text="fresh2")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/fresh2.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
 Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu25)
@@ -747,7 +835,7 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu25)
 @dp.callback_query_handler(text="fresh3")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/fresh3.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
 Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu26)
@@ -756,7 +844,7 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu26)
 @dp.callback_query_handler(text="fresh4")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/fresh4.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
 Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu27)
@@ -765,7 +853,7 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu27)
 @dp.callback_query_handler(text="fresh5")
 async def ichimlik(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/fresh5.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
 Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu28)
@@ -900,7 +988,7 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu28)
 @dp.callback_query_handler(text="salat")
 async def salat(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog3.jpg','rb'),
+        photo=open('images/salat.jpg','rb'),
         caption="""🥗Salat Menu""",reply_markup = salat_menu1)
     await call.message.delete()
 
@@ -908,27 +996,49 @@ async def salat(call:CallbackQuery):
 @dp.callback_query_handler(text="salat1")
 async def salat(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/salat1.jpg','rb'),
+        caption="""Narxi: 18000 so'm💵
+Tarkibi: 
+Dudlangan kurka go’shti — 100 g;
+Dudlangan kolbasa — 100 g;
+Qaynatilgan mol go’shti  yoki qaynatma kolbasa — 100 g;
+Qazi — 100 g;
+Qaynatilgan tuxum — 1 ta;
+Qattiq navli pishloq — 100 g;
+Mayonez — 200 g;
+Bezatish uchun salat bargi, tuz, murch.. 
 Miqdorini tanlang yoki kiriting!""",reply_markup = salat_menu2)
     await call.message.delete()
 
 @dp.callback_query_handler(text="salat2")
 async def salat(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/salat2.jpg','rb'),
+        caption="""Narxi: 18000 so'm💵
+Tarkibi: 
+Tovuq filesi — 400 g
+Aysberg salati — 1 bosh
+Cherri pomidorlari — 200 g
+Parmezan pishlog’i — 100 g
+Oq non — yarimta
+Sarimsoq — 2 tishcha
+Zaytun moyi — 3 osh qoshiq
+Tuz, murch. 
 Miqdorini tanlang yoki kiriting!""",reply_markup = salat_menu3)
     await call.message.delete()
 
 @dp.callback_query_handler(text="salat3")
 async def salat(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/salat3.jpg','rb'),
+        caption="""Narxi: 18000 so'm💵
+Tarkibi: 
+200 gramm qaynatilgan tovuq filesi
+200 gramm pishloq
+1 ta konservalangan ananas
+1 ta konservalangan makkajo'xori
+300 gramm olma
+250-300 gramm mayonez 
 Miqdorini tanlang yoki kiriting!""",reply_markup = salat_menu4)
     await call.message.delete()
 
@@ -936,9 +1046,17 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = salat_menu4)
 @dp.callback_query_handler(text="salat4")
 async def salat(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/salat4.jpg','rb'),
+        caption="""Narxi: 18000 so'm💵
+Tarkibi: 
+1 ta yangi chiqqan karam
+300 gramm pomidor
+300 gramm bodring
+150 gramm sabzi
+1 bog' ko'k piyoz
+1 bog' shivit
+3 osh qoshiq o'simlik yog'i
+2 osh qoshiq limon sharbati 
 Miqdorini tanlang yoki kiriting!""",reply_markup = salat_menu5)
     await call.message.delete()
 
@@ -946,9 +1064,15 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = salat_menu5)
 @dp.callback_query_handler(text="salat5")
 async def salat(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/salat5.jpg','rb'),
+        caption="""Narxi: 18000 so'm💵
+Tarkibi: 
+250 gramm bodring
+150 gramm brinza 
+1 bog' salat bargi
+2 osh qoshiq o'simlik yog'i
+yarimta limon sharbati
+ta'bga ko'ra tuz va murch
 Miqdorini tanlang yoki kiriting!""",reply_markup = salat_menu6)
     await call.message.delete()
 
@@ -956,9 +1080,17 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = salat_menu6)
 @dp.callback_query_handler(text="salat6")
 async def salat(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/salat6.jpg','rb'),
+        caption="""Narxi: 16000 so'm💵
+Tarkibi: 
+200 gramm qaynatilgan mol go'shti
+150 gramm qaynatilgan guruch
+100 gramm qaynatilgan sabzi
+4 ta qaynatilgan sabzi
+200 gramm konservalangan yashil no'xot
+1 bog' ko'k piyoz
+ta'bga ko'ra tuz
+150-200 gramm mayonez
 Miqdorini tanlang yoki kiriting!""",reply_markup = salat_menu7)
     await call.message.delete()
 
@@ -1001,7 +1133,7 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = salat_menu7)
 @dp.callback_query_handler(text="sous")
 async def sous(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog3.jpg','rb'),
+        photo=open('images/sous.jpg','rb'),
         caption="""🥫Sous Menu""",reply_markup = sous_menu1)
     await call.message.delete()
 
@@ -1009,9 +1141,9 @@ async def sous(call:CallbackQuery):
 @dp.callback_query_handler(text="sous1")
 async def sous(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/sous1.jpg','rb'),
+        caption="""Narxi: 5000 so'm💵
+Pishloqli Sous 
 Miqdorini tanlang yoki kiriting!""",reply_markup = sous_menu2)
     await call.message.delete()
 
@@ -1019,9 +1151,9 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = sous_menu2)
 @dp.callback_query_handler(text="sous2")
 async def sous(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/sous2.jpg','rb'),
+        caption="""Narxi: 5000 so'm💵
+Chili Achiq Sous 
 Miqdorini tanlang yoki kiriting!""",reply_markup = sous_menu3)
     await call.message.delete()
 
@@ -1029,9 +1161,9 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = sous_menu3)
 @dp.callback_query_handler(text="sous3")
 async def sous(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/sous3.jpg','rb'),
+        caption="""Narxi: 5000 so'm💵
+Sarimsoq piyozli Sous
 Miqdorini tanlang yoki kiriting!""",reply_markup = sous_menu4)
     await call.message.delete()
 
@@ -1039,18 +1171,18 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = sous_menu4)
 @dp.callback_query_handler(text="sous4")
 async def sous(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/sous4.jpg','rb'),
+        caption="""Narxi: 5000 so'm💵
+Mayanez 
 Miqdorini tanlang yoki kiriting!""",reply_markup = sous_menu5)
     await call.message.delete()
 
 @dp.callback_query_handler(text="sous5")
 async def sous(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/sous5.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Garchitsa
 Miqdorini tanlang yoki kiriting!""",reply_markup = sous_menu6)
     await call.message.delete()
 
@@ -1058,9 +1190,9 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = sous_menu6)
 @dp.callback_query_handler(text="sous6")
 async def sous(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
+        photo=open('images/sous6.jpg','rb'),
         caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+Ketchup
 Miqdorini tanlang yoki kiriting!""",reply_markup = sous_menu7)
     await call.message.delete()
 
@@ -1102,7 +1234,7 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = sous_menu7)
 @dp.callback_query_handler(text="garnir")
 async def garnir(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog3.jpg','rb'),
+        photo=open('images/garnir.jpg','rb'),
         caption="""🍟Garnir Menu""",reply_markup = gar_menu1)
     await call.message.delete()
 
@@ -1110,9 +1242,9 @@ async def garnir(call:CallbackQuery):
 @dp.callback_query_handler(text="gar1")
 async def garnir(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/garnir1.jpg','rb'),
+        caption="""Narxi: 10000 so'm💵
+Kartoshka Free
 Miqdorini tanlang yoki kiriting!""",reply_markup = gar_menu2)
     await call.message.delete()
 
@@ -1120,27 +1252,27 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = gar_menu2)
 @dp.callback_query_handler(text="gar2")
 async def garnir(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/garnir2.jpg','rb'),
+        caption="""Narxi: 11000 so'm💵
+Kartoshka Derevenskiy
 Miqdorini tanlang yoki kiriting!""",reply_markup = gar_menu3)
     await call.message.delete()
 
 @dp.callback_query_handler(text="gar3")
 async def garnir(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/garnir3.jpg','rb'),
+        caption="""Narxi: 9000 so'm💵
+Qaynatilgan Gruch. 
 Miqdorini tanlang yoki kiriting!""",reply_markup = gar_menu4)
     await call.message.delete()
 
 @dp.callback_query_handler(text="gar4")
 async def garnir(call:CallbackQuery):
     await call.message.answer_photo(
-        photo=open('images/hoddog7.jpg','rb'),
-        caption="""Narxi: 15000 so'm💵
-Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz. 
+        photo=open('images/garnir4.jpg','rb'),
+        caption="""Narxi: 8000 so'm💵
+Jo'xori
 Miqdorini tanlang yoki kiriting!""",reply_markup = gar_menu5)
     await call.message.delete()            
 
@@ -1191,7 +1323,7 @@ async def nazad1(call:CallbackQuery):
 async def nazad1(call:CallbackQuery):
     await call.message.answer("<b>Lavash turini tanlang </b>",parse_mode = 'HTML',reply_markup = lavash_menyu1)
 
-@dp.callback_query_handler(text="back1")
+@dp.callback_query_handler(text="back6")
 async def nazad1(call:CallbackQuery):
     await call.message.answer("<b>Lavash turini tanlang </b>",parse_mode = 'HTML',reply_markup = lavash_menyu1)
 
@@ -1328,15 +1460,15 @@ async def donar(call:CallbackQuery):
 
 @dp.callback_query_handler(text="back45")
 async def donar(call:CallbackQuery):
-    await call.message.answer("<b>Donarni tanlang </b>",parse_mode = 'HTML',reply_markup = menu)    
+    await call.message.answer("<b>Sendvich tanlang🥪 </b>",parse_mode = 'HTML',reply_markup = menu)    
 
 @dp.callback_query_handler(text="back46")
 async def donar(call:CallbackQuery):
-    await call.message.answer("<b>Donarni tanlang </b>",parse_mode = 'HTML',reply_markup = sendvich_menu1)   
+    await call.message.answer("<b>Sendvich tanlang🥪 </b>",parse_mode = 'HTML',reply_markup = sendvich_menu1)   
 
 @dp.callback_query_handler(text="back47")
 async def donar(call:CallbackQuery):
-    await call.message.answer("<b>Donarni tanlang </b>",parse_mode = 'HTML',reply_markup = sendvich_menu1)    
+    await call.message.answer("<b>Sendvich tanlang🥪 </b>",parse_mode = 'HTML',reply_markup = sendvich_menu1)    
 
 
 #desert uchun nazad knopka
@@ -1591,14 +1723,7 @@ async def garnir(call:CallbackQuery):
 
 
 
-@dp.message_handler(text="🇷🇺 Руссуий")
-async def ruscha_uchun(message: types.Message):
-    await message.answer("<b>Здравствуйте! \n\nДля заказа нажмите кнопку Menyu📕 </b>",parse_mode='HTML',reply_markup=menyu2)
-
     
-@dp.message_handler(text="🇬🇧 England")
-async def england_uchun(message: types.Message):
-    await message.answer("<b>Hello</b>",parse_mode='HTML')    
 
 
 if __name__ == '__main__':

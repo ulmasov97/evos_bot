@@ -16,33 +16,45 @@ til = ReplyKeyboardMarkup(
 	resize_keyboard=True
 )
 
-joy = ReplyKeyboardMarkup(
+
+raqam = ReplyKeyboardMarkup(
 	keyboard=[
 		[		
-				KeyboardButton(text="Yunusobod"),
-				KeyboardButton(text="Chilonzor")
+				KeyboardButton(text="📞 Raqamni yuboring", request_contact=True)
 		],
-		[		
-				KeyboardButton(text="Olmozor"),
-				KeyboardButton(text="Sergili")
-		],		
-		[		
-				KeyboardButton(text="Yangobod"),
-				KeyboardButton(text="Yakkasaroy")
-		],
+
 				
 	],
 	resize_keyboard=True
 )
 
-zakaz = InlineKeyboardMarkup(
-	inline_keyboard = [
 
-		[
-				InlineKeyboardButton(text = "Buyurtma",callback_data = "buy")
+joy = ReplyKeyboardMarkup(
+	keyboard=[
+		[		
+				KeyboardButton(text="📍 Joylashuvni yuboring", request_location=True)
 		],
+
+				
 	],
+	resize_keyboard=True
 )
+
+# buy = ReplyKeyboardMarkup(
+# 	keyboard=[
+# 		[		
+# 				KeyboardButton(text="🍽Menu")
+# 		],
+# 		[		
+# 				KeyboardButton(text="🛠Sozlamalar")
+# 		],
+
+				
+# 	],
+# 	resize_keyboard=True
+# )
+
+
 
 menu = InlineKeyboardMarkup(
 	inline_keyboard=[
