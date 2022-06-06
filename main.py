@@ -1,4 +1,4 @@
-from config import TOKEN     # bu yerda tokenni(config.py fayillimizdan) chaqirib oldik
+from config import TOKEN
 import logging 
 from aiogram import Bot, Dispatcher, executor, types
 from buttons import *      # bu yerda knopkalarimizni chaqirib oldik (buttons.py dan)
