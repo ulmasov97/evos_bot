@@ -45,71 +45,9 @@ async def england_uchun(message: types.Message):
 
 
 
-# #buyurtma uchun
-
-# @dp.message_handler(text="Yunusobod")
-# async def buyr(message: types.Message):
-#     await message.answer("<b> Yunusobod tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)
-
-# @dp.message_handler(text="Chilonzor")
-# async def buyr(message: types.Message):
-#     await message.answer("<b> Chilonzor tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)    
-
-# @dp.message_handler(text="Olmozor")
-# async def buyr(message: types.Message):
-#     await message.answer("<b> Olmozor tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)
-
-# @dp.message_handler(text="Sergili")
-# async def buyr(message: types.Message):
-#     await message.answer("<b> Sergili tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)
-
-# @dp.message_handler(text="Yangobod")
-# async def buyr(message: types.Message):
-#     await message.answer("<b> Yangobod tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)
-
-# @dp.message_handler(text="Yakkasaroy")
-# async def buyr(message: types.Message):
-#     await message.answer("<b> Yakkasaroy tumani uchun buyurtma </b>",parse_mode = 'HTML',reply_markup = zakaz)
 
 
-
-#Menyu uchun
-
-# @dp.callback_query_handler(text="buy")
-# async def men(call:CallbackQuery):
-#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)
-
-# @dp.message_handler(text="buy")
-# async def men(call:CallbackQuery):
-#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)
-
-# @dp.message_handler(text="buy")
-# async def men(call:CallbackQuery):
-#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)
-
-# @dp.message_handler(text="buy")
-# async def men(call:CallbackQuery):
-#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)
-
-# @dp.message_handler(text="buy")
-# async def men(call:CallbackQuery):
-#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)
-
-# @dp.message_handler(text="buy")
-# async def men(call:CallbackQuery):
-#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu) 
-
-# @dp.message_handler(text="buy")
-# async def men(call:CallbackQuery):
-#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu) 
-
-# @dp.message_handler(text="buy")
-# async def men(call:CallbackQuery):
-#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu) 
-
-# @dp.message_handler(text="buy")
-# async def men(call:CallbackQuery):
-#     await call.message.answer("<b>Kategoriyadan birini tanlang </b>",parse_mode = 'HTML',reply_markup = menu)                            
+                           
 
 
 
@@ -192,35 +130,6 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = lavash_menyu8)
     await call.message.delete()
 
 
-
-
-
-
-
-
-# @dp.callback_query_handler(text="lavash2")
-# async def tovuqli_soni(call:CallbackQuery):
-#     await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🌯Classic mini lavash \nNarxi: 17000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu3)
-
-# @dp.callback_query_handler(text="lavash3")
-# async def tovuqli_soni(call:CallbackQuery):
-#     await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🧀Pishloqli lavash \nNarxi: 20000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu4)
-
-# @dp.callback_query_handler(text="lavash4")
-# async def tovuqli_soni(call:CallbackQuery):
-#     await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🧀Pishloqli mini lavash \nNarxi: 18000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu5)
-
-# @dp.callback_query_handler(text="lavash5")
-# async def tovuqli_soni(call:CallbackQuery):
-#     await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🥖Tandir lavash \nNarxi: 20000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu6)
-
-# @dp.callback_query_handler(text="lavash6")
-# async def tovuqli_soni(call:CallbackQuery):
-#     await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🥖Tandir pishloqli🧀 lavash \nNarxi: 21000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu7)
-
-# @dp.callback_query_handler(text="lavash7")
-# async def tovuqli_soni(call:CallbackQuery):
-#     await call.message.answer("<b>Lavash turini tanlang \nSiz tanlagan Lavash: 🌶Qalampirli lavash \nNarxi: 19000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = lavash_menyu8)
 
 
 
@@ -472,18 +381,6 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = donar_menu3)
     await call.message.delete()    
 
 
-# @dp.callback_query_handler(text="donar")
-# async def burger(call:CallbackQuery):
-#     await call.message.answer("<b>Donarni tanlang🥙 </b>",parse_mode = 'HTML',reply_markup = donar_menu1)
-
-# @dp.callback_query_handler(text="d_tovuq")
-# async def burger(call:CallbackQuery):
-#     await call.message.answer("<b>Siz tanlagan donar: \nTovuqli Donar🥙 \nNarxi 19000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = donar_menu2)
-
-# @dp.callback_query_handler(text="d_gusht")
-# async def burger(call:CallbackQuery):
-#     await call.message.answer("<b>Siz tanlagan donar: \nGo'shtli Donar🥙 \nNarxi 22000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = donar_menu3) 
-
 
 # Sendvich Uchun menu
 
@@ -517,18 +414,6 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = sendvich_menu3)
 
 
 
-
-# @dp.callback_query_handler(text="send")
-# async def sendvich(call:CallbackQuery):
-#     await call.message.answer("<b>Sendvichni tanlang🥪 </b>",parse_mode = 'HTML',reply_markup = sendvich_menu1)
-
-# @dp.callback_query_handler(text="t_send1")
-# async def sendvich(call:CallbackQuery):
-#     await call.message.answer("<b>Siz tanlagan \nTuxumli Sendvich🍳🥪 \nNarxi: 17000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = sendvich_menu2)
-
-# @dp.callback_query_handler(text="t_send2")
-# async def sendvich(call:CallbackQuery):
-#     await call.message.answer("<b>Siz tanlagan \nTovuqli Sendvich🍗🥪 \nNarxi: 19000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = sendvich_menu3)
 
 
 #Desertlar uchun menu
@@ -581,25 +466,6 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = desert_menu5)
 
 
 
-# @dp.callback_query_handler(text="desert")
-# async def desert(call:CallbackQuery):
-#     await call.message.answer("<b>Desertni tanlang🍰 </b>",parse_mode = 'HTML',reply_markup = desert_menu1)
-
-# @dp.callback_query_handler(text="medovik")
-# async def desert(call:CallbackQuery):
-#     await call.message.answer("<b>Desertni tanlang🍰 \nSiz tanlagan desert: Asalli Medovik🧁 \nNarxi: 13000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = desert_menu2)
-
-# @dp.callback_query_handler(text="chizkey")
-# async def desert(call:CallbackQuery):
-#     await call.message.answer("<b>Desertni tanlang🍰 \nSiz tanlagan desert: Chizkeyk🍰 \nNarxi: 12000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = desert_menu3)
-
-# @dp.callback_query_handler(text="q_pon")
-# async def desert(call:CallbackQuery):
-#     await call.message.answer("<b>Desertni tanlang🍰 \nSiz tanlagan desert: Qulupnayli Ponchik🍩 \nNarxi: 11000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = desert_menu4)
-
-# @dp.callback_query_handler(text="sh_pon")
-# async def desert(call:CallbackQuery):
-#     await call.message.answer("<b>Desertni tanlang🍰 \nSiz tanlagan desert: Shkaladli Ponchik🍩 \nNarxi: 11000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = desert_menu5)            
 
 
 
@@ -860,126 +726,6 @@ Tarkibi: Kulcha, 2ta sosiska,ketchup, chili va xantal,qovurilgan piyoz.
 Miqdorini tanlang yoki kiriting!""",reply_markup = ichimlik_menu28)
     await call.message.delete()
 
-# @dp.callback_query_handler(text="ichimlik")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu1)
-
-# @dp.callback_query_handler(text="pepsi")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu2)
-
-# @dp.callback_query_handler(text="suv")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu3)
-
-# @dp.callback_query_handler(text="sok")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu4)
-
-# @dp.callback_query_handler(text="choy")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu5)
-
-# @dp.callback_query_handler(text="kofe")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu6)
-
-# @dp.callback_query_handler(text="fresh")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu7)                        
-
-
-
-
-# @dp.callback_query_handler(text="pepsi1")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Pepsi-0.4L🥤 \nNarxi: 6000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu8)
-
-# @dp.callback_query_handler(text="pepsi2")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Pepsi-0.5L🥤 \nNarxi: 8000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu9)
-
-# @dp.callback_query_handler(text="pepsi3")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Pepsi-1.5L🥤 \nNarxi:12000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu10)        
-
-
-# @dp.callback_query_handler(text="suv1")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Gazlangan Suv-0.5L🥛 \nNarxi: 3000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu11)
-
-# @dp.callback_query_handler(text="suv2")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Gazlanmagan Suv-0.5L🥛 \nNarxi: 3000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu12)
-
-
-# @dp.callback_query_handler(text="sok1")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: 🍎Olmali Sok🧃🥤 \nNarxi:12000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu13)
-
-# @dp.callback_query_handler(text="sok2")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: 🍊Apelsinli Sok🧃 \nNarxi:12000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu14)
-
-
-# @dp.callback_query_handler(text="sok3")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: 🍑Shaftolili Sok🧃 \nNarxi:12000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu15)
-
-
-# @dp.callback_query_handler(text="choy1")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Ko'k Choy🍵 \nNarxi:12000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu16)
-
-# @dp.callback_query_handler(text="choy2")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Qora Choy🍵 \nNarxi:12000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu17)
-
-# @dp.callback_query_handler(text="choy3")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Limon Choy🍋🍵 \nNarxi:12000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu18)
-
-
-# @dp.callback_query_handler(text="kofe1")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Kapuchino☕ \nNarxi:9000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu19)
-
-# @dp.callback_query_handler(text="kofe2")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Amerikano☕️ \nNarxi:8000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu20)
-
-# @dp.callback_query_handler(text="kofe3")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Latte☕️ \nNarxi:10000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu21)
-
-# @dp.callback_query_handler(text="kofe4")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Ekspresso☕️ \nNarxi:7000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu22)
-
-# @dp.callback_query_handler(text="kofe5")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Sutli kofe☕️ \nNarxi:5000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu23)
-
-
-# @dp.callback_query_handler(text="fresh1")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Issiq shokolad🍹 \nNarxi:15000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu24)
-
-# @dp.callback_query_handler(text="fresh2")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Qulupnayli moxito🍹 \nNarxi:15000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu25)
-
-# @dp.callback_query_handler(text="fresh3")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Banan va sutli kokteyl🍹 \nNarxi:15000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu26)
-
-# @dp.callback_query_handler(text="fresh4")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Moxito🍹 \nNarxi:15000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu27)
-
-# @dp.callback_query_handler(text="fresh5")
-# async def ichimlik(call:CallbackQuery):
-#     await call.message.answer("<b>Ichimliklarni tanlang🥤 \nSiz tanlagan Ichimlik: Shaftoli va malinali smuzi🍹 \nNarxi:15000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = ichimlik_menu28)
 
 
 
@@ -1097,33 +843,6 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = salat_menu7)
 
 
 
-# @dp.callback_query_handler(text="salat")
-# async def salat(call:CallbackQuery):
-#     await call.message.answer("<b>Salatni tanlang🥗  </b>",parse_mode = 'HTML',reply_markup = salat_menu1)
-
-# @dp.callback_query_handler(text="salat1")
-# async def salat(call:CallbackQuery):
-#     await call.message.answer("<b>Salatni tanlang🥗 \nSiz tanlagan Salat: Murskoy kapriz🥗 \nNarxi: 13000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = salat_menu2)
-
-# @dp.callback_query_handler(text="salat2")
-# async def salat(call:CallbackQuery):
-#     await call.message.answer("<b>Salatni tanlang🥗 \nSiz tanlagan Salat: Sezar🥗 \nNarxi: 13000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = salat_menu3)    
-
-# @dp.callback_query_handler(text="salat3")
-# async def salat(call:CallbackQuery):
-#     await call.message.answer("<b>Salatni tanlang🥗 \nSiz tanlagan Ananas va tovuqli salat🥗 \nNarxi: 13000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = salat_menu4)
-
-# @dp.callback_query_handler(text="salat4")
-# async def salat(call:CallbackQuery):
-#     await call.message.answer("<b>Salatni tanlang🥗 \nSiz tanlagan Salat: Sabzavotli yengil salat🥗 \nNarxi: 13000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = salat_menu5)
-
-# @dp.callback_query_handler(text="salat5")
-# async def salat(call:CallbackQuery):
-#     await call.message.answer("<b>Salatni tanlang🥗 \nSiz tanlagan Salat: Bodring va brinzali salat🥗 \nNarxi: 13000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = salat_menu6)
-
-# @dp.callback_query_handler(text="salat6")
-# async def salat(call:CallbackQuery):
-#     await call.message.answer("<b>Salatni tanlang🥗 \nSiz tanlagan Salat: Shanxay salati🥗 \nNarxi: 13000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = salat_menu7)
 
 
 
@@ -1201,31 +920,6 @@ Miqdorini tanlang yoki kiriting!""",reply_markup = sous_menu7)
 
 
 
-# @dp.callback_query_handler(text="sous")
-# async def sous(call:CallbackQuery):
-#     await call.message.answer("<b>Sousni tanlang🥫 </b>",parse_mode = 'HTML',reply_marsous_menu1@dp.callback_query_handler(text="sous1")
-# async def sous(call:CallbackQuery):
-#     await call.message.answer("<b>Sousni tanlang🥫 \nSiz tanlagan Sous: Sirli🧀 \nNarxi: 3000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = sous_menu2)
-
-# @dp.callback_query_handler(text="sous2")
-# async def sous(call:CallbackQuery):
-#     await call.message.answer("<b>Sousni tanlang🥫 \nSiz tanlagan Sous: Chili🌶 \nNarxi: 3000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = sous_menu3)    
-
-# @dp.callback_query_handler(text="sous3")
-# async def sous(call:CallbackQuery):
-#     await call.message.answer("<b>Sousni tanlang🥫 \nSiz tanlagan Sous: Chesnokli🧄 \nNarxi: 3000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = sous_menu4)
-
-# @dp.callback_query_handler(text="sous4")
-# async def sous(call:CallbackQuery):
-#     await call.message.answer("<b>Sousni tanlang🥫 \nSiz tanlagan Sous: Mayanez🥫 \nNarxi: 3000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = sous_menu5)
-
-# @dp.callback_query_handler(text="sous5")
-# async def sous(call:CallbackQuery):
-#     await call.message.answer("<b>Sousni tanlang🥫 \nSiz tanlagan Sous: Garchitsa🥫 \nNarxi: 3000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = sous_menu6)
-
-# @dp.callback_query_handler(text="sous6")
-# async def sous(call:CallbackQuery):
-#     await call.message.answer("<b>Sousni tanlang🥫 \nSiz tanlagan Sous: Ketchup🍅 \nNarxi: 3000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = sous_menu7)
 
 
 
@@ -1277,26 +971,6 @@ Jo'xori
 Miqdorini tanlang yoki kiriting!""",reply_markup = gar_menu5)
     await call.message.delete()            
 
-
-# @dp.callback_query_handler(text="garnir")
-# async def garnir(call:CallbackQuery):
-#     await call.message.answer("<b>Garnirni tanlang🍟 </b>",parse_mode = 'HTML',reply_markup = gar_menu1)
-
-# @dp.callback_query_handler(text="gar1")
-# async def garnir(call:CallbackQuery):
-#     await call.message.answer("<b>Garnirni tanlang🍟 \nSiz tanlagan Garnir:Kartoshka Free🍟 \nNarxi: 10000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = gar_menu2)
-
-# @dp.callback_query_handler(text="gar2")
-# async def garnir(call:CallbackQuery):
-#     await call.message.answer("<b>Garnirni tanlang🍟 \nSiz tanlagan Garnir:Kartoshka Derevenskiy🍟 \nNarxi: 12000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = gar_menu3)
-
-# @dp.callback_query_handler(text="gar3")
-# async def garnir(call:CallbackQuery):
-#     await call.message.answer("<b>Garnirni tanlang🍟 \nSiz tanlagan Garnir:Gruch🍚 \nNarxi: 8000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = gar_menu4)
-
-# @dp.callback_query_handler(text="gar4")
-# async def garnir(call:CallbackQuery):
-#     await call.message.answer("<b>Garnirni tanlang🍟 \nSiz tanlagan Garnir:Jo'xori🌽 \nNarxi: 8000 so'm💵 </b>",parse_mode = 'HTML',reply_markup = gar_menu5)
 
 
 
